@@ -1,0 +1,13 @@
+{
+	"ID": "1cbfae6546ae4a8c82c55d046451cf16",
+	"ActionKeyword": "=",
+	"IsGlobal": false,
+	"Name": "WebStormWorkspaces",
+	"Author": "aciq",
+	"Version": "1.0.0",
+	"Language": "csharp",
+	"Website": "https://github.com/aciq/PowerToys-Run-Plugin-WebStormWorkspaces",
+	"ExecuteFileName": "WebStormWorkspaces.dll",
+	"IcoPathDark": "images\\webstorm.png",
+	"IcoPathLight": "images\\webstorm.png"
+}

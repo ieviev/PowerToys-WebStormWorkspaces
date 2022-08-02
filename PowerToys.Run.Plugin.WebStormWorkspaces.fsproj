@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Platforms>x64</Platforms>
+        <NeutralLanguage>en-US</NeutralLanguage>
+        <useWPF>true</useWPF>
+        <Version>0.57.0</Version>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="PluginQuery.fs" />
+        <None Include="testing.fsx" />
+        <Compile Include="Plugin.fs" />
+        <Content Include="plugin.json">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="images\webstorm.png">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <Content Include="postbuild.ps1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FSharp.Data" Version="4.2.6" />
+        <PackageReference Update="FSharp.Core" Version="6.0.1" />
+        <PackageReference Include="ILRepack" Version="2.0.18" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Reference Include="Wox.Infrastructure">
+        <HintPath>lib\Wox.Infrastructure.dll</HintPath>
+      </Reference>
+      <Reference Include="Wox.Plugin">
+        <HintPath>lib\Wox.Plugin.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
