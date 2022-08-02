@@ -8,6 +8,7 @@ similar to the VS Code Workspaces plugin included with PowerToys
 
 - Add the folder from release to the directory:
 - `%LOCALAPPDATA%\Microsoft\PowerToys\PowerToys Run\Plugins\`
+- Restart the plugin
 - Enable the plugin
 
 ![](_resources/16-20-26.png)
