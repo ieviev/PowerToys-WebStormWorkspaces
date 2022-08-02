@@ -12,7 +12,7 @@ if ($powertoys) { Stop-Process -n PowerToys }
 $localpublish = "publish"
 $out = "$env:LOCALAPPDATA\Microsoft\PowerToys\PowerToys Run\Plugins\WebStormWorkspaces\"
 # delete old publish folder
-# Remove-Item -Recurse -Force $out
+Remove-Item -Recurse -Force $out
 # copy new publish folder
 Copy-Item -Recurse $localpublish $out -Force
 $currlocation = Get-Location

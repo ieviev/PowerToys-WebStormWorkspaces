@@ -14,9 +14,9 @@ type WebStormPlugin() =
             SubTitle=sub,
             Title=name
         )
-    
         
     interface IPlugin with
+
         member this.Description: string = "WebStormWorkspaces"
         member this.Name: string = "WebStormWorkspaces"
         member this.Init(context) = data.Force() |> ignore
@@ -33,13 +33,13 @@ type WebStormPlugin() =
                 if score = 0 then None else
                 let dayspassed = DateTimeOffset.Now.Subtract(f.lastOpened).TotalHours |> int    
                 score <- score - dayspassed
-                
+
                 let folder = f.location |> Path.GetDirectoryName
                 let dateonly = f.lastOpened.ToString("yyyy-MM-dd")
                 let subtitle = $"Project Folder: {folder}, Last opened {dateonly} "
                 let res =
                     createResult slnname subtitle (fun d ->
-                        ProcessStartInfo(f.location,"",UseShellExecute=true)
+                        ProcessStartInfo("webstorm.cmd",f.location,UseShellExecute=true,WindowStyle=ProcessWindowStyle.Hidden)
                         |> Process.Start
                         |> ignore
                         true
