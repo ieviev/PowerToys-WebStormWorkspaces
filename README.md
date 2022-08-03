@@ -6,9 +6,12 @@ similar to the VS Code Workspaces plugin included with PowerToys
 
 ## Installation
 
+NOTE: currently only works with WebStorm installed from Jetbrains Toolbox
+
+- Stop the PowerToys process
 - Add the folder from release to the directory:
 - `%LOCALAPPDATA%\Microsoft\PowerToys\PowerToys Run\Plugins\`
-- Restart the plugin
+- Start PowerToys
 - Enable the plugin
 
 ![](_resources/16-20-26.png)
